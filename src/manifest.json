@@ -48,7 +48,17 @@
       "run_at": "document_idle",
       "css": ["src/solve/style.css"],
       "js": ["src/manifest.js", "src/solve/script.js"]
-    }
+    },
+    {
+      "matches": [
+          "https://www.google.com/recaptcha/api2/anchor*"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle",
+      "js": [
+          "src/solve/clicker.js"
+      ]
+  }
   ],
 
   "options_ui": {

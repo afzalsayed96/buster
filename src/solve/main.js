@@ -84,9 +84,12 @@ function syncUI() {
 
     div.appendChild(button);
     document.querySelector('.rc-buttons').appendChild(div);
+    dispatchEnter(button)
   }
 }
-
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 function isBlocked({timeout = 0} = {}) {
   const selector = '.rc-doscaptcha-body';
   if (timeout) {
